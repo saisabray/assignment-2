@@ -81,12 +81,15 @@ nav {
 .button-container {
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .banner {
 
   width: 100%;
   background: url(assets/hero-bg.png);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .banner-container {
   padding: 101px 0;
@@ -216,8 +219,8 @@ hr {
   background: #250d44;
   border-radius: 25px;
   border: none;
-  max-width: 380px;
-  max-height: 440px;
+  width: 380px;
+  height: 440px;
 }
 .card-desc {
   padding: 24px;
@@ -283,6 +286,7 @@ iframe {
   width: 50%;
 }
 footer {
+  width: 100%;
   background: url("assets/footer-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -304,6 +308,10 @@ footer {
 .social-media {
   gap: 8px;
 }
+.line{
+    width: 100%;
+  }
+
 /* Hover effect/Animation */
 
 .menu li:hover {
@@ -363,65 +371,28 @@ footer {
 }
 /* Responsive here */
 @media screen and (max-width: 576px) {
+  .brand-logo{
+    font-size: 1.25rem;
+  }
   .menu,
   .none {
     display: none;
   }
-  .banner-title{
-    font-size: 2.5rem;
+  nav{
+  padding: 20px 0;
   }
-  .host-details {
-    flex-direction: column;
-    text-align: center;
-  }
-  .host-name {
-    text-align: center;
-  }
-  .card-container{
-    grid-template-columns: 1fr;
-  }
-
-  .card-desc{
-  gap: 8px;
-  }
- .features-episodes{
-  padding: 60px 0;
-  }
+ 
   .hum{
     display: block;
   }
   .hum img{
     width: 100%;
   }
-  nav{
-  padding: 20px 0;
+  .banner{
+    background-position:0 135px;
+    background-size: contain;
   }
-  .brand-logo{
-    font-size: 1.25rem;
-  }
-  .copyright{
-    text-align: center;
-  }
-  .footer-social{
-    gap:25px;
-  }
-  .about-host{
-    justify-content: center;
-    align-items: center;
-  }
-  .banner p{
-    text-align: center;
-  }
-  .title{
-    font-size: 2rem;
-  }
-  .sub-title{
-    font-size: 1.375rem;
-  }
-  .feature-card-title{
-    font-size: 1.25rem;
-  }
-  .stats-num{
+  .banner-title{
     font-size: 2.5rem;
   }
   .micro{
@@ -432,8 +403,11 @@ footer {
     top:4px;
     right:-1px;
   }
-  .feature-card-section{
-    gap: 16px;
+  .banner p{
+    text-align: center;
+  }
+  .title{
+    font-size: 2rem;
   }
   .stats{
     display: grid;
@@ -441,18 +415,32 @@ footer {
     grid-template-rows: repeat(2,1fr);
     gap: 10px;
   }
-  .footer-container{
-    padding: 40px 20px;
+ .stats-num{
+    font-size: 2.5rem;
   }
-  .
-  .footer{
-    background-size: cover;
-    width: 100%;
+  .sub-title{
+    font-size: 1.375rem;
+  }
+  .feature-card-title{
+    font-size: 1.25rem;
+  }
+  .feature-card{
+   width: 100%;
+  }
+  
+   .features-episodes{
+   padding: 60px 0;
+  }
+  .card-desc{
+    gap: 8px;
+  }
+
+  .feature-card-section{
+    gap: 20px;
   }
   .card-container{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-
   }
   .bigcard, .smallcard, .widecard{
     grid-column: auto;
@@ -461,4 +449,27 @@ footer {
   .host-container{
     padding: 40px 0;
   }
+   .about-host{
+    justify-content: center;
+    align-items: center;
+  }
+   .host-details {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+  .host-name {
+    text-align: center;
+  }
+  .footer-container{
+    padding: 40px 20px;
+  }
+  .copyright{
+    text-align: center;
+    white-space: inherit;
+  }
+  .footer-social{
+    gap:25px;
+  }
+
 }
