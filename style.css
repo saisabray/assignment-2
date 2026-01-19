@@ -19,6 +19,7 @@
 .display {
   margin: auto;
   max-width: 1200px;
+  width: 90%;
 }
 .display-flex {
   display: flex;
@@ -30,6 +31,7 @@ header {
 }
 nav {
   padding: 24px 0;
+  border-bottom: 1px solid #ffffff;
 }
 .title {
   color: #ffffff;
@@ -54,7 +56,9 @@ nav {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.hum {
+  display: none;
+}
 .menu li {
   list-style: none;
   padding: 12.5px 16px;
@@ -79,6 +83,8 @@ nav {
   gap: 8px;
 }
 .banner {
+
+  width: 100%;
   background: url(assets/hero-bg.png);
   background-position: center;
 }
@@ -99,6 +105,10 @@ nav {
   text-align: center;
   justify-content: center;
   position: relative;
+}
+.micro-img {
+  max-width: 33%;
+  height: auto;
 }
 .banner-content {
   flex-direction: column;
@@ -149,6 +159,8 @@ hr {
 .stats {
   margin-top: 120px;
   gap: 80px;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
 }
 .choose {
   background: #230e3d;
@@ -161,7 +173,7 @@ hr {
 .card {
   flex-direction: column;
   gap: 16px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   padding: 40px;
   border-radius: 40px;
@@ -174,34 +186,27 @@ hr {
   grid-template-rows: repeat(3, 265px);
   gap: 30px;
 }
-.card1 {
+.bigcard{
   grid-column: span 1;
   grid-row: span 2;
-  padding: 105px 40px;
 }
-.card2 {
+.widecard{
   grid-column: span 2;
-  grid-row: span 1;
+  grid-row:span 1;
 }
-.card3 {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-.card4 {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-.card5 {
+.smallcard{
   grid-column: span 1;
   grid-row: span 1;
-  overflow: hidden;
-}
-.features-episodes {
-  background-color: #1a0b2e;
-  padding: 120px 0;
 }
 .feature-card-section {
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.features-episodes{
+  background: #1A0B2E;
+  padding: 120px 0;
 }
 .feature-title {
   text-align: center;
@@ -292,6 +297,9 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
+  fl
+
 }
 .social-media {
   gap: 8px;
@@ -347,4 +355,110 @@ footer {
 .circle-bg:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+}
+.card:hover{
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+  background: #0d0518;
+}
+/* Responsive here */
+@media screen and (max-width: 576px) {
+  .menu,
+  .none {
+    display: none;
+  }
+  .banner-title{
+    font-size: 2.5rem;
+  }
+  .host-details {
+    flex-direction: column;
+    text-align: center;
+  }
+  .host-name {
+    text-align: center;
+  }
+  .card-container{
+    grid-template-columns: 1fr;
+  }
+
+  .card-desc{
+  gap: 8px;
+  }
+ .features-episodes{
+  padding: 60px 0;
+  }
+  .hum{
+    display: block;
+  }
+  .hum img{
+    width: 100%;
+  }
+  nav{
+  padding: 20px 0;
+  }
+  .brand-logo{
+    font-size: 1.25rem;
+  }
+  .copyright{
+    text-align: center;
+  }
+  .footer-social{
+    gap:25px;
+  }
+  .about-host{
+    justify-content: center;
+    align-items: center;
+  }
+  .banner p{
+    text-align: center;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .sub-title{
+    font-size: 1.375rem;
+  }
+  .feature-card-title{
+    font-size: 1.25rem;
+  }
+  .stats-num{
+    font-size: 2.5rem;
+  }
+  .micro{
+    width: 200px;
+    height: 200px;
+  }
+  .badge{
+    top:4px;
+    right:-1px;
+  }
+  .feature-card-section{
+    gap: 16px;
+  }
+  .stats{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+  }
+  .footer-container{
+    padding: 40px 20px;
+  }
+  .
+  .footer{
+    background-size: cover;
+    width: 100%;
+  }
+  .card-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+  }
+  .bigcard, .smallcard, .widecard{
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .host-container{
+    padding: 40px 0;
+  }
 }
