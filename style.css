@@ -14,6 +14,7 @@
   font-weight: 600;
   border-radius: 25px;
   text-align: center;
+  border: none;
 }
 .display {
   margin: auto;
@@ -235,4 +236,64 @@ iframe {
   border: none;
   width: 100%;
   height: 210px;
+}
+.host-container {
+  background: #1a0b2e;
+  padding-bottom: 120px;
+}
+.host-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.host-details {
+  border-radius: 40px;
+  background: rgba(53, 17, 101, 0.4);
+  padding: 40px;
+  gap: 24px;
+}
+.host-name {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.about-host {
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: start;
+}
+.host-social {
+  justify-content: flex-start;
+  gap: 8px;
+}
+.circle-bg {
+  border: 1px solid #533c72;
+  border-radius: 50%;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.host-social img {
+  width: 50%;
+}
+footer {
+  background: url("assets/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer-container {
+  flex-direction: column;
+  gap: 32px;
+  padding: 120px 0;
+}
+.footer-social {
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.social-media {
+  gap: 8px;
 }
