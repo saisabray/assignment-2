@@ -31,7 +31,7 @@ header {
 }
 nav {
   padding: 24px 0;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff45;
 }
 .title {
   color: #ffffff;
@@ -148,7 +148,7 @@ nav {
   margin-top: 16px;
 }
 hr {
-  border: 1px solid #ffffff;
+  border: 1px solid #ffffff45;
 }
 .stats-details {
   flex-direction: column;
@@ -370,6 +370,9 @@ footer {
   background: #0d0518;
 }
 /* Responsive here */
+
+/* (max-width: 576px)  */
+
 @media screen and (max-width: 576px) {
   .brand-logo{
     font-size: 1.25rem;
@@ -410,10 +413,7 @@ footer {
     font-size: 2rem;
   }
   .stats{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    gap: 10px;
+  justify-content: center;
   }
  .stats-num{
     font-size: 2.5rem;
@@ -471,5 +471,111 @@ footer {
   .footer-social{
     gap:25px;
   }
+}
+ /* (min-width:576px) and (max-width:768px) */
 
+@media screen and (min-width:576px) and (max-width:768px) {
+  .menu{
+    display: none;
+  }
+  .banner-title{
+    font-size: 3rem;
+  }
+  
+  .title{
+    font-size: 2.25rem;
+  }
+  .sub-title{
+    font-size: 1.375rem;
+  }
+  .stats{
+    justify-content: center;
+  }
+   .card-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
+  }
+  .bigcard, .widecard{
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  .smallcard{
+    grid-column: span 2;
+    grid-row: auto;
+  }
+ .feature-card-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  }
+  .feature-card{
+    width: 100%;
+  }
+  .feature-card-3{
+    grid-column: span 2;
+    width: 50%;
+    justify-self:center;
+  }
+  .host-details{
+    padding: 25px;
+  }
+  .footer-container h2{
+    font-size: 2.5rem;
+  }
+  .hum{
+    display: block;
+    order: -1;
+  }
+  .brand-logo{
+    order: 1;
+    margin-left: 85px;
+  }
+  .btn{
+    order:2;
+  }
+}
+
+/* (min-width:768px) and (max-width:992px) */
+
+@media screen and (min-width:768px) and (max-width:992px){
+  .micro{
+    width: 300px;
+    height: 300px;
+  }
+  .badge{
+    top:4px;
+    right:-1px;
+  }
+  .stats{
+    justify-content: center;
+  }
+    .card-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
+  }
+
+  .bigcard, .widecard{
+    grid-column: span 1;
+    grid-row: auto;
+  }
+  .smallcard{
+    grid-column: span 2;
+    width: 50%;
+    justify-self: center;
+  }
+  .feature-card-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  }
+  .feature-card{
+    width: 100%;
+  }
+  .feature-card-3{
+    grid-column: span 2;
+    width: 50%;
+    justify-self:center;
+  }
 }
