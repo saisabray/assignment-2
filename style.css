@@ -414,6 +414,8 @@ footer {
   }
   .stats{
   justify-content: center;
+  gap: 30px;
+  flex-direction: column;
   }
  .stats-num{
     font-size: 2.5rem;
