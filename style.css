@@ -392,7 +392,7 @@ footer {
     width: 100%;
   }
   .banner{
-    background-position:0 135px;
+    background-position:left 30%;
     background-size: contain;
   }
   .banner-title{
